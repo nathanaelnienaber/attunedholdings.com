@@ -6,7 +6,7 @@ import { criteriaCards } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Acquisition Criteria",
   description:
-    "Nathanael Nienaber is acquiring Washington manufacturing and environmental businesses, operating via Attuned Holding.",
+    "Nathanael Nienaber is acquiring Washington manufacturing and environmental businesses, operating via Attuned Holdings.",
 };
 
 export default function CriteriaPage() {
@@ -15,7 +15,7 @@ export default function CriteriaPage() {
       <PageHero
         eyebrow="Acquisition Criteria"
         title="Specific parameters for sellers, brokers, and advisors."
-        description="Operating via Attuned Holding, I am focused on profitable Washington businesses where founder legacy, employee continuity, and modernization can compound value."
+        description="Operating via Attuned Holdings, I am focused on profitable Washington businesses where founder legacy, employee continuity, and modernization can compound value."
       />
 
       <section className="bg-slate-50 px-6 py-20 lg:px-8">
@@ -39,7 +39,7 @@ export default function CriteriaPage() {
             </h2>
             <p className="mt-5 leading-8 text-slate-600">
               I am looking for a business where I can apply my operational expertise
-              as the owner-operator of Attuned Holding.
+              as the owner-operator of Attuned Holdings.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">

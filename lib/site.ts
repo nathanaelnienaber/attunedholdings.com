@@ -17,13 +17,24 @@ import {
 export const site = {
   name: "Nathanael Nienaber",
   founder: "Nathanael Nienaber",
-  entity: "Attuned Holding",
+  entity: "Attuned Holdings",
   entityType: "C-Corp",
-  email: "nnienaber@protonmail.com",
+  email: "nathanaelnienaber@protonmail.com",
   phone: "+1-425-563-5652",
   location: "Bellevue, WA",
   url: "https://attunedholdings.com",
 };
+
+export const socialLinks = [
+  {
+    label: "Searchfunder",
+    href: "https://searchfunder.com/profile/nathanael-nienaber",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/nnienaber/",
+  },
+];
 
 export const navItems = [
   { href: "/", label: "Home" },
@@ -40,7 +51,7 @@ export const trustSignals = [
   "PMP",
   "Cloud Genius",
   "ROBS Ready",
-  "Legal Vehicle: Attuned Holding (C-Corp)",
+  "Legal Vehicle: Attuned Holdings C-Corp",
 ];
 
 export type Feature = {
@@ -73,7 +84,7 @@ export const criteriaCards: Feature[] = [
   {
     title: "Deal Structure",
     description:
-      "$1M+ equity via ROBS through Attuned Holding with openness to SBA and seller financing.",
+      "$1M+ equity via ROBS through Attuned Holdings with openness to SBA and seller financing.",
     icon: Handshake,
   },
   {
@@ -141,7 +152,7 @@ export const schemaData = [
       "@id": `${site.url}/#organization`,
       name: site.entity,
     },
-    sameAs: [site.url],
+    sameAs: [site.url, ...socialLinks.map((link) => link.href)],
     alumniOf: "Northwest University",
     knowsAbout: [
       "Manufacturing acquisitions",

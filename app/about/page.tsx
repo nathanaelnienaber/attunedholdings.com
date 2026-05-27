@@ -7,7 +7,7 @@ import { aboutTimeline } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Nathanael Nienaber",
   description:
-    "Nathanael Nienaber, former Boeing leader and MBA, is acquiring and operating Washington businesses through Attuned Holding.",
+    "Nathanael Nienaber, former Boeing leader and MBA, is acquiring and operating Washington businesses through Attuned Holdings.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A technical operator with startup grit and enterprise transformation experience."
-        description="I am Nathanael Nienaber. I am establishing Attuned Holding, a C-Corporation, to acquire and operate one enduring Washington business for the next 20 years."
+        description="I am Nathanael Nienaber. I am establishing Attuned Holdings C-Corp to acquire and operate one enduring Washington business for the next 20 years."
       />
 
       <section className="bg-white px-6 py-20 lg:px-8">

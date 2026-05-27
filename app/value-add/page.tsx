@@ -7,7 +7,7 @@ import { valueAddCards } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Value Add",
   description:
-    "How Nathanael Nienaber, operating via Attuned Holding, improves acquired businesses through modernization and owner-operator leadership.",
+    "How Nathanael Nienaber, operating via Attuned Holdings, improves acquired businesses through modernization and owner-operator leadership.",
 };
 
 export default function ValueAddPage() {
@@ -16,7 +16,7 @@ export default function ValueAddPage() {
       <PageHero
         eyebrow="Value Add"
         title="Modernization without losing what made the business valuable."
-        description="Operating via Attuned Holding, I bring hands-on leadership that improves systems, protects people, and compounds durable customer value."
+        description="Operating via Attuned Holdings, I bring hands-on leadership that improves systems, protects people, and compounds durable customer value."
       />
 
       <section className="bg-slate-50 px-6 py-20 lg:px-8">
@@ -54,7 +54,7 @@ export default function ValueAddPage() {
             </p>
             <p className="mt-4 leading-8 text-slate-600">
               I am looking for a business where I can apply my operational expertise
-              as the owner-operator of Attuned Holding.
+              as the owner-operator of Attuned Holdings.
             </p>
           </div>
         </div>

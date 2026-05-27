@@ -4,15 +4,15 @@ import { Banknote, Clock, Landmark, WalletCards } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Capital Structure: Attuned Holding",
+  title: "Capital Structure: Attuned Holdings",
   description:
-    "Nathanael Nienaber controls $1M+ in ROBS equity capital deployed through Attuned Holding for Washington business acquisitions.",
+    "Nathanael Nienaber controls $1M+ in ROBS equity capital deployed through Attuned Holdings for Washington business acquisitions.",
 };
 
 const financingPoints = [
   {
     title: "Deployable Equity",
-    description: "$1M+ in equity capital deployed through Attuned Holding.",
+    description: "$1M+ in equity capital deployed through Attuned Holdings.",
     icon: WalletCards,
   },
   {
@@ -37,8 +37,8 @@ export default function FinancingPage() {
     <>
       <PageHero
         eyebrow="Financing"
-        title="Capital Structure: Attuned Holding"
-        description="I have established Attuned Holding as the legal vehicle for this acquisition. Through a ROBS structure within this C-Corp, I have deployed $1M+ in equity capital."
+        title="Capital Structure: Attuned Holdings"
+        description="I have established Attuned Holdings C-Corp as the legal vehicle for this acquisition. Through a ROBS structure within this C-Corp, I have deployed $1M+ in equity capital."
       />
 
       <section className="bg-white px-6 py-20 lg:px-8">

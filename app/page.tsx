@@ -26,7 +26,7 @@ export default function Home() {
               Acquiring Washington Manufacturing & Industrial Businesses
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-200">
-              Led by Nathanael Nienaber | Operating via Attuned Holding | $1M+ Equity Capital
+              Led by Nathanael Nienaber | Operating via Attuned Holdings | $1M+ Equity Capital
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -107,7 +107,7 @@ export default function Home() {
               {
                 icon: CheckCircle2,
                 title: "Legal Vehicle",
-                text: "Legal Vehicle: Attuned Holding (C-Corp), established for acquisition and operating control.",
+                text: "Legal Vehicle: Attuned Holdings C-Corp, established for acquisition and operating control.",
               },
             ].map((item) => {
               const Icon = item.icon;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { site } from "@/lib/site";
+import { site, socialLinks } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -46,6 +46,18 @@ export default function ContactPage() {
                   <MapPin className="h-5 w-5 text-sky-600" />
                   {site.location}
                 </p>
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 hover:text-sky-700"
+                  >
+                    <ExternalLink className="h-5 w-5 text-sky-600" />
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
           </aside>

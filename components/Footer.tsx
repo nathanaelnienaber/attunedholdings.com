@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { navItems, site } from "@/lib/site";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { navItems, site, socialLinks } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -47,15 +47,27 @@ export function Footer() {
               <MapPin className="h-4 w-4 text-sky-300" />
               {site.location}
             </p>
+            {socialLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 hover:text-white"
+              >
+                <ExternalLink className="h-4 w-4 text-sky-300" />
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
       <div className="border-t border-white/10 px-6 py-5 text-center text-xs text-slate-400">
         <p>
-          © 2026 Nathanael Nienaber. Operating as Attuned Holding. All rights reserved.
+          © 2026 Nathanael Nienaber. Operating as Attuned Holdings. All rights reserved.
         </p>
         <a href="/contact" className="mt-2 inline-block hover:text-white">
-          Legal Entity: Attuned Holding, LLC
+          Legal Entity: Attuned Holdings C-Corp
         </a>
       </div>
     </footer>

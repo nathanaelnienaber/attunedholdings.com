@@ -17,19 +17,19 @@ export const metadata: Metadata = {
     template: "%s | Nathanael Nienaber",
   },
   description:
-    "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holding. $1M+ ROBS equity ready.",
+    "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holdings. $1M+ ROBS equity ready.",
   keywords: [
     "Washington business acquisition",
     "manufacturing acquisition",
     "environmental services acquisition",
     "search fund",
-    "Attuned Holding",
+    "Attuned Holdings",
     "Nathanael Nienaber",
   ],
   openGraph: {
     title: "Nathanael Nienaber | Acquiring Manufacturing Businesses in WA",
     description:
-      "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holding.",
+      "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holdings.",
     url: site.url,
     siteName: `${site.name} | ${site.entity}`,
     locale: "en_US",
