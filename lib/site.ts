@@ -36,6 +36,31 @@ export const socialLinks = [
   },
 ];
 
+export const booking = {
+  username: "nathanaelnienaber",
+  baseUrl: "https://cal.com/nathanaelnienaber",
+  eventTypes: [
+    {
+      id: "video-call",
+      label: "Video call",
+      description: "Zoom, Teams, Google Meet, or similar.",
+      calLink: "nathanaelnienaber/video-call",
+    },
+    {
+      id: "phone-call",
+      label: "Phone call",
+      description: "No video needed.",
+      calLink: "nathanaelnienaber/phone-call",
+    },
+    {
+      id: "in-person",
+      label: "In-person",
+      description: "Meet in Bellevue, WA.",
+      calLink: "nathanaelnienaber/in-person",
+    },
+  ],
+} as const;
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },

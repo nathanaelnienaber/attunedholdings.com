@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { ExternalLink, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { site, socialLinks } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 
+const BookingEmbed = dynamic(
+  () => import("./BookingEmbed").then((module) => module.BookingEmbed),
+  {
+    ssr: false,
+    loading: () => <p className="text-slate-500">Loading calendar...</p>,
+  },
+);
+
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Nathanael Nienaber about Washington manufacturing or environmental business acquisition opportunities.",
+    "Contact Nathanael Nienaber or schedule a video, phone, or in-person meeting about Washington manufacturing or environmental business acquisition opportunities.",
 };
 
 export default function ContactPage() {
@@ -18,6 +27,22 @@ export default function ContactPage() {
         title="Share a confidential acquisition opportunity."
         description="Founder, broker, lender, and advisor conversations are welcomed. NDA review is available before sensitive materials are exchanged."
       />
+
+      <section className="bg-white px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-950">
+            Book a meeting
+          </h2>
+          <p className="mt-4 max-w-2xl leading-7 text-slate-600">
+            Pick a call type, then day, then time slot. You will need to enter
+            your email and phone number so Nathanael can reach you and send a
+            meeting reminder.
+          </p>
+          <div className="mt-10">
+            <BookingEmbed />
+          </div>
+        </div>
+      </section>
 
       <section className="bg-slate-50 px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
