@@ -64,7 +64,7 @@ export default function Home() {
                 ["Revenue Target", "$1M - 3M"],
                 ["EBITDA / SDE", "$250K - $800K"],
                 ["Deployable Equity", "$200K - $800K via ROBS"],
-                ["Closing Readiness", "30-45 days from LOI"],
+                ["Closing Readiness", "45-90 days from LOI"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-slate-50 p-5">
                   <p className="text-sm font-medium text-slate-500">{label}</p>
