@@ -67,7 +67,7 @@ export function Footer() {
           © 2026 Nathanael Nienaber. Operating as Attuned Holdings. All rights reserved.
         </p>
         <a href="/contact" className="mt-2 inline-block hover:text-white">
-          Legal Entity: Attuned Holdings C-Corp
+          Legal Entity to conduct search efforts: Attuned Holdings LLC
         </a>
       </div>
     </footer>

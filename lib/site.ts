@@ -19,7 +19,7 @@ export const site = {
   founder: "Nathanael Nienaber",
   entity: "Attuned Holdings",
   entityType: "C-Corp",
-  email: "nathanaelnienaber@protonmail.com",
+  email: "nathanael@attunedholdings.com",
   phone: "+1-425-563-5652",
   location: "Bellevue, WA",
   url: "https://attunedholdings.com",

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Factory, MapPin, ShieldCheck } from "lucide-react";
-import { criteriaCards, site, trustSignals } from "@/lib/site";
+import { criteriaCards, trustSignals } from "@/lib/site";
 import { FeatureCard } from "@/components/FeatureCard";
 
 export default function Home() {
@@ -64,7 +64,6 @@ export default function Home() {
                 ["Revenue Target", "$1M - 3M"],
                 ["EBITDA / SDE", "$250K - $800K"],
                 ["Deployable Equity", "$200K - $800K via ROBS"],
-                ["Legal Vehicle", `${site.entity} (${site.entityType})`],
                 ["Closing Readiness", "30-45 days from LOI"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-slate-50 p-5">
