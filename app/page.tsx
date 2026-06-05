@@ -61,9 +61,9 @@ export default function Home() {
             </p>
             <div className="mt-6 grid gap-4">
               {[
-                ["Revenue Target", "$2.5M - $10M"],
-                ["EBITDA / SDE", "$400K - $1.2M"],
-                ["Deployable Equity", "$1M+ via ROBS"],
+                ["Revenue Target", "$1M - 3M"],
+                ["EBITDA / SDE", "$250K - $800K"],
+                ["Deployable Equity", "$200K - $800K via ROBS"],
                 ["Legal Vehicle", `${site.entity} (${site.entityType})`],
                 ["Closing Readiness", "30-45 days from LOI"],
               ].map(([label, value]) => (

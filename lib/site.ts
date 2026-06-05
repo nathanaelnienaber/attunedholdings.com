@@ -128,7 +128,7 @@ export const aboutTimeline = [
   },
   {
     title: "Boeing Transformation Leader",
-    description: "Spent 8+ years as an Analytic Chief of Staff at VP level and led modernization of 30+ year legacy systems.",
+    description: "Spent 5+ years as a Technical Product Manager, Chief of Staff for CDO and led modernization of 30+ year legacy systems.",
   },
 ];
 
