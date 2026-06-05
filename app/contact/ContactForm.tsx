@@ -16,6 +16,7 @@ type ContactFormValues = {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -27,10 +28,30 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: ContactFormValues) {
-    console.log("Mock contact submission", values);
-    setSubmitted(true);
-    reset();
+  async function onSubmit(values: ContactFormValues) {
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setSubmitError(result.error ?? "Unable to send your message right now. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Unable to send your message right now. Please try again.");
+    }
   }
 
   return (
@@ -38,6 +59,12 @@ export function ContactForm() {
       {submitted ? (
         <div className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium text-emerald-800">
           Thank you. Your message has been received and will be reviewed promptly.
+        </div>
+      ) : null}
+
+      {submitError ? (
+        <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
+          {submitError}
         </div>
       ) : null}
 
