@@ -8,7 +8,7 @@ type ContactFormValues = {
   name: string;
   email: string;
   phone: string;
-  role: "Broker" | "Founder" | "";
+  role: "Broker" | "Owner" | "Other" | "";
   businessName: string;
   revenue: string;
   message: string;
@@ -108,7 +108,8 @@ export function ContactForm() {
           >
             <option value="">Select one</option>
             <option value="Broker">Broker</option>
-            <option value="Founder">Founder</option>
+            <option value="Owner">Owner</option>
+            <option value="Other">Other</option>
           </select>
         </Field>
 
