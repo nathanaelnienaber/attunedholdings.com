@@ -34,6 +34,10 @@ export const socialLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/nnienaber/",
   },
+  {
+    label: "nathanaelnienaber.com",
+    href: "https://nathanaelnienaber.com",
+  },
 ];
 
 export const booking = {

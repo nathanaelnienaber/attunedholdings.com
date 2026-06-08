@@ -61,7 +61,7 @@ export default function Home() {
             </p>
             <div className="mt-6 grid gap-4">
               {[
-                ["Revenue Target", "$1M - 3M"],
+                ["Revenue Target", "$1M - $5M"],
                 ["EBITDA / SDE", "$250K - $800K"],
                 ["Deployable Equity", "$200K - $800K via ROBS"],
                 ["Closing Readiness", "45-90 days from LOI"],
