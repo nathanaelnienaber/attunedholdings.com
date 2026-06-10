@@ -77,14 +77,6 @@ export const dealProfileRows = [
   { label: "Closing Readiness", value: "30 to 45 days from LOI" },
 ] as const;
 
-export const heroFitCardRows = [
-  { label: "Revenue Target", value: "$1M to $15M+" },
-  { label: "EBITDA / SDE", value: "$250K to $2M" },
-  { label: "Deployable Capital", value: "$1.5M+" },
-  { label: "Pre-Qualification", value: "Up to $8M acquisition" },
-  { label: "Closing Readiness", value: "30 to 45 days from LOI" },
-] as const;
-
 export const idealSituations = [
   {
     title: "Outdated IT",
