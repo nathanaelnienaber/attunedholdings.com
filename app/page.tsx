@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Factory, MapPin, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Flame,
+  Handshake,
+  HeartHandshake,
+  ShieldCheck,
+} from "lucide-react";
 import { criteriaCards, trustSignals } from "@/lib/site";
 import { FeatureCard } from "@/components/FeatureCard";
 
@@ -10,8 +17,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-slate-950">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="https://images.unsplash.com/photo-1581093458791-9d15482442f6?auto=format&fit=crop&w=1800&q=80"
-            alt="Industrial manufacturing floor"
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1800&q=80"
+            alt="Commercial field service technician at work"
             fill
             priority
             className="object-cover"
@@ -23,10 +30,13 @@ export default function Home() {
               Washington Operator-Buyer
             </p>
             <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Acquiring Washington Manufacturing & Industrial Businesses
+              Building a company where people can grow old in.
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-200">
-              Led by Nathanael Nienaber | Operating via Attuned Holdings LLC | $1.5M+ Deployable Capital
+              I&apos;m Nathanael Nienaber — a hands-on operator acquiring a Washington
+              service business through Attuned Holdings LLC. I&apos;m not a fund flipping
+              assets. I&apos;m here to protect what works, strengthen the team, and build
+              something that lasts.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -57,12 +67,12 @@ export default function Home() {
 
           <div className="rounded-3xl border border-white/10 bg-white/95 p-6 shadow-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">
-              Acquisition Snapshot
+              Operator Fit
             </p>
             <div className="mt-6 grid gap-4">
               {[
-                ["Revenue Target", "$1M - $5M"],
-                ["EBITDA / SDE", "$250K - $800K"],
+                ["Revenue Target", "$1M - $15M+"],
+                ["EBITDA / SDE", "$250K - $2M"],
                 ["Deployable Capital", "$1.5M+"],
                 ["Pre-Qualification", "Up to $8M acquisition"],
                 ["Closing Readiness", "30-45 days from LOI"],
@@ -77,6 +87,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-slate-200 bg-white px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-lg leading-8 text-slate-600">
+            Most sellers don&apos;t want a financial buyer who disappears after closing.
+            They want someone who will show up, keep the team intact, and invest in the
+            business year after year. That&apos;s the company I&apos;m building.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
@@ -84,30 +104,30 @@ export default function Home() {
               Key Highlights
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-950">
-              A personal operator-buyer with a clear legal acquisition vehicle.
+              An operator-buyer building for the long term.
             </h2>
           </div>
           <div className="mt-10 grid gap-8 lg:grid-cols-4">
             {[
               {
-                icon: Factory,
-                title: "Industrial Focus",
-                text: "Focused on enduring manufacturing, infrastructure, construction, and environmental services companies.",
+                icon: Flame,
+                title: "Essential Service Industries",
+                text: "Fire & life safety, compliance & inspection, MSPs, commercial field services, and other recurring B2B service businesses.",
               },
               {
                 icon: ShieldCheck,
-                title: "Technical Modernization",
-                text: "Experienced in IT modernization, Zero Trust Architecture, automation, and legacy system transformation.",
+                title: "Operational Strength",
+                text: "Modernize systems without disrupting the people who make the business work.",
               },
               {
-                icon: MapPin,
-                title: "Washington Commitment",
-                text: "Bellevue-based and committed to operating a local legacy business for the next 20 years.",
+                icon: HeartHandshake,
+                title: "Built to Last",
+                text: "Bellevue-based, long-term operator — continuity for employees and customers.",
               },
               {
-                icon: CheckCircle2,
-                title: "Legal Vehicle",
-                text: "Legal Vehicle: Attuned Holdings LLC, established to conduct search efforts and support acquisition readiness.",
+                icon: Handshake,
+                title: "Hands-On Operator",
+                text: "Works with existing leadership; builds on a foundation that already works.",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -134,8 +154,8 @@ export default function Home() {
               Clear acquisition criteria for serious conversations.
             </h2>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {criteriaCards.slice(0, 3).map((feature) => (
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {criteriaCards.slice(0, 4).map((feature) => (
               <FeatureCard key={feature.title} feature={feature} />
             ))}
           </div>
@@ -159,7 +179,8 @@ export default function Home() {
               </div>
               <h2 className="mt-4 text-3xl font-bold">Have a business that matches?</h2>
               <p className="mt-3 max-w-2xl text-slate-300">
-                Founder, broker, and advisor conversations are handled directly and confidentially.
+                If you&apos;re planning a transition and want a buyer who will honor your
+                team&apos;s legacy, let&apos;s talk confidentially.
               </p>
             </div>
             <Link

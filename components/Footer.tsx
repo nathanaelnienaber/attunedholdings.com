@@ -12,8 +12,10 @@ export function Footer() {
             Operating as {site.entity}
           </p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
-            Operator-buyer pursuing Washington manufacturing, industrial, and
-            environmental services businesses with durable teams and room for modernization.
+            Operator-buyer pursuing enduring Washington essential service businesses
+            — fire & life safety, compliance, MSPs, commercial field services, and
+            adjacent recurring B2B services — with durable teams and long-term
+            continuity.
           </p>
         </div>
 

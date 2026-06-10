@@ -41,7 +41,7 @@ export default function AboutPage() {
               I am not building a faceless fund. I am preparing to be the
               owner-operator who shows up in the business, works with the team, and
               applies my experience from Boeing transformation, startup leadership,
-              and industrial operations to protect and grow the company.
+              and service and compliance operations to protect and grow the company.
             </p>
             <p className="mt-4 leading-8 text-slate-600">
               My goal is to buy a legacy business where the founder, employees, and

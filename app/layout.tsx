@@ -13,23 +13,26 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Nathanael Nienaber | Acquiring Manufacturing Businesses in WA",
+    default: "Nathanael Nienaber | Long-Term Operator-Buyer in Washington",
     template: "%s | Nathanael Nienaber",
   },
   description:
-    "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holdings LLC. $1.5M+ deployable capital with lender pre-qualification up to $8M.",
+    "Nathanael Nienaber, former Boeing leader, is a hands-on operator acquiring Washington essential service businesses — fire & life safety, compliance, MSPs, and commercial field services — via Attuned Holdings LLC. $1.5M+ deployable capital with lender pre-qualification up to $8M.",
   keywords: [
     "Washington business acquisition",
-    "manufacturing acquisition",
-    "environmental services acquisition",
+    "fire and life safety acquisition",
+    "compliance services acquisition",
+    "MSP acquisition",
+    "managed IT services acquisition",
+    "commercial field services acquisition",
     "search fund",
     "Attuned Holdings",
     "Nathanael Nienaber",
   ],
   openGraph: {
-    title: "Nathanael Nienaber | Acquiring Manufacturing Businesses in WA",
+    title: "Nathanael Nienaber | Long-Term Operator-Buyer in Washington",
     description:
-      "Nathanael Nienaber, former Boeing leader, is acquiring manufacturing and environmental businesses in Washington State via Attuned Holdings LLC. $1.5M+ deployable capital with lender pre-qualification up to $8M.",
+      "Nathanael Nienaber, former Boeing leader, is a hands-on operator acquiring Washington essential service businesses — fire & life safety, compliance, MSPs, and commercial field services — via Attuned Holdings LLC. $1.5M+ deployable capital with lender pre-qualification up to $8M.",
     url: site.url,
     siteName: `${site.name} | ${site.entity}`,
     locale: "en_US",

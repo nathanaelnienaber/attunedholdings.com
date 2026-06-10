@@ -16,7 +16,7 @@ const BookingEmbed = dynamic(
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Nathanael Nienaber or schedule a video, phone, or in-person meeting about Washington manufacturing or environmental business acquisition opportunities.",
+    "Contact Nathanael Nienaber or schedule a video, phone, or in-person meeting about Washington essential service business acquisition opportunities.",
 };
 
 export default function ContactPage() {

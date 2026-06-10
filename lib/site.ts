@@ -90,10 +90,22 @@ export type Feature = {
   icon: LucideIcon;
 };
 
+export const industryFocusIntro =
+  "We concentrate on essential, service-based industries, including:";
+
+export const essentialIndustries = [
+  "Fire & life safety services",
+  "Compliance and inspection services",
+  "Managed IT services (MSPs)",
+  "Commercial field services and technical maintenance businesses",
+  "Adjacent B2B service categories with recurring revenue characteristics",
+];
+
 export const criteriaCards: Feature[] = [
   {
     title: "Industries",
-    description: "Manufacturing, Environmental Services, Infrastructure, and Construction.",
+    description:
+      "Essential service-based businesses: fire & life safety, compliance & inspection, MSPs, commercial field services, and adjacent B2B services with recurring revenue.",
     icon: Factory,
   },
   {
@@ -103,12 +115,12 @@ export const criteriaCards: Feature[] = [
   },
   {
     title: "Revenue",
-    description: "$2.5M - $10M in annual revenue with durable customer relationships.",
+    description: "$1M - $15M+ in annual revenue with durable customer relationships.",
     icon: LineChart,
   },
   {
     title: "EBITDA / SDE",
-    description: "$400K - $1.2M in earnings with room for disciplined operational growth.",
+    description: "$250K - $2M in earnings with room for disciplined operational growth.",
     icon: BadgeDollarSign,
   },
   {
@@ -121,6 +133,12 @@ export const criteriaCards: Feature[] = [
     title: "Ideal Pain Points",
     description: "Outdated IT, manual processes, founder retirement, and modernization needs.",
     icon: CheckCircle2,
+  },
+  {
+    title: "Business Profile",
+    description:
+      "Existing management layer, recurring or repeat revenue, and a business that can run without the owner for short periods.",
+    icon: Users,
   },
 ];
 
@@ -137,7 +155,8 @@ export const valueAddCards: Feature[] = [
   },
   {
     title: "Growth",
-    description: "Digital marketing systems, sales scaling, customer visibility, and data-driven decisions.",
+    description:
+      "Digital marketing systems, customer visibility, and data-driven decisions that strengthen the business.",
     icon: Network,
   },
   {
@@ -185,10 +204,12 @@ export const schemaData = [
     sameAs: [site.url, ...socialLinks.map((link) => link.href)],
     alumniOf: "Northwest University",
     knowsAbout: [
-      "Manufacturing acquisitions",
-      "Environmental services",
+      "Fire and life safety services",
+      "Compliance and inspection services",
+      "Managed IT services",
+      "Commercial field services",
+      "Business acquisitions",
       "IT modernization",
-      "Zero Trust Architecture",
       "Operational automation",
     ],
   },
