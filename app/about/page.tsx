@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A technical operator with startup grit and enterprise transformation experience."
-        description="I am Nathanael Nienaber. I am establishing Attuned Holdings C-Corp to acquire and operate one enduring Washington business for the next 20 years."
+        description="I am Nathanael Nienaber. I am establishing Attuned Holdings LLC to acquire and operate one enduring Washington business for the next 20 years."
       />
 
       <section className="bg-white px-6 py-20 lg:px-8">

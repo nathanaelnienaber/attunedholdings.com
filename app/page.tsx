@@ -26,7 +26,7 @@ export default function Home() {
               Acquiring Washington Manufacturing & Industrial Businesses
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-200">
-              Led by Nathanael Nienaber | Operating via Attuned Holdings | $1M+ Equity Capital
+              Led by Nathanael Nienaber | Operating via Attuned Holdings LLC | $1.5M+ Deployable Capital
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -63,8 +63,9 @@ export default function Home() {
               {[
                 ["Revenue Target", "$1M - $5M"],
                 ["EBITDA / SDE", "$250K - $800K"],
-                ["Deployable Equity", "$200K - $800K via ROBS"],
-                ["Closing Readiness", "45-90 days from LOI"],
+                ["Deployable Capital", "$1.5M+"],
+                ["Pre-Qualification", "Up to $8M acquisition"],
+                ["Closing Readiness", "30-45 days from LOI"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-2xl bg-slate-50 p-5">
                   <p className="text-sm font-medium text-slate-500">{label}</p>
@@ -106,7 +107,7 @@ export default function Home() {
               {
                 icon: CheckCircle2,
                 title: "Legal Vehicle",
-                text: "Legal Vehicle: Attuned Holdings C-Corp, established for acquisition and operating control.",
+                text: "Legal Vehicle: Attuned Holdings LLC, established to conduct search efforts and support acquisition readiness.",
               },
             ].map((item) => {
               const Icon = item.icon;
