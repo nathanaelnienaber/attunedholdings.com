@@ -79,6 +79,7 @@ export const trustSignals = [
   "MBA",
   "PMP",
   "Cloud Genius",
+  "SBA Pre-Approved Up To $8M",
   "ROBS Ready",
   "Legal Vehicle: Attuned Holdings C-Corp",
 ];
