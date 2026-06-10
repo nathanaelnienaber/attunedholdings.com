@@ -1,35 +1,30 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { site } from "@/lib/site";
 
-type ContactFormValues = {
-  name: string;
-  email: string;
-  phone: string;
-  role: "Broker" | "Owner" | "Other" | "";
-  businessName: string;
-  revenue: string;
-  message: string;
-};
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function ContactForm() {
+  const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormValues>({
-    defaultValues: {
-      role: "",
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fieldError, setFieldError] = useState<string | null>(null);
 
-  async function onSubmit(values: ContactFormValues) {
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     setSubmitError(null);
+    setFieldError(null);
+
+    const trimmedEmail = email.trim();
+
+    if (!trimmedEmail || !emailPattern.test(trimmedEmail)) {
+      setFieldError("Enter a valid email address.");
+      return;
+    }
+
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("/api/contact", {
@@ -37,7 +32,7 @@ export function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ email: trimmedEmail }),
       });
 
       const result = (await response.json()) as { error?: string };
@@ -48,17 +43,19 @@ export function ContactForm() {
       }
 
       setSubmitted(true);
-      reset();
+      setEmail("");
     } catch {
       setSubmitError("Unable to send your message right now. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="rounded-3xl bg-white p-6 shadow-xl lg:p-8">
+    <form onSubmit={onSubmit} className="rounded-3xl bg-white p-6 shadow-xl lg:p-8">
       {submitted ? (
         <div className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium text-emerald-800">
-          Thank you. Your message has been received and will be reviewed promptly.
+          Thank you. I&apos;ll follow up at the email address you provided.
         </div>
       ) : null}
 
@@ -68,101 +65,33 @@ export function ContactForm() {
         </div>
       ) : null}
 
-      <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Name" error={errors.name?.message}>
-          <input
-            className="form-input"
-            {...register("name", { required: "Name is required." })}
-            autoComplete="name"
-          />
-        </Field>
-
-        <Field label="Email" error={errors.email?.message}>
-          <input
-            className="form-input"
-            type="email"
-            {...register("email", {
-              required: "Email is required.",
-              pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "Enter a valid email address.",
-              },
-            })}
-            autoComplete="email"
-          />
-        </Field>
-
-        <Field label="Phone" error={errors.phone?.message}>
-          <input
-            className="form-input"
-            type="tel"
-            {...register("phone")}
-            autoComplete="tel"
-          />
-        </Field>
-
-        <Field label="Role" error={errors.role?.message}>
-          <select
-            className="form-input"
-            {...register("role", { required: "Please select a role." })}
-          >
-            <option value="">Select one</option>
-            <option value="Broker">Broker</option>
-            <option value="Owner">Owner</option>
-            <option value="Other">Other</option>
-          </select>
-        </Field>
-
-        <Field label="Business Name" error={errors.businessName?.message}>
-          <input
-            className="form-input"
-            {...register("businessName", { required: "Business name is required." })}
-          />
-        </Field>
-
-        <Field label="Revenue" error={errors.revenue?.message}>
-          <input
-            className="form-input"
-            placeholder="$2.5M to $10M"
-            {...register("revenue")}
-          />
-        </Field>
-      </div>
-
-      <div className="mt-5">
-        <Field label="Message" error={errors.message?.message}>
-          <textarea
-            className="form-input min-h-36 resize-y"
-            {...register("message", { required: "Message is required." })}
-          />
-        </Field>
-      </div>
+      <label className="block">
+        <span className="text-sm font-semibold text-slate-700">Email</span>
+        <input
+          className="form-input mt-2"
+          type="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          autoComplete="email"
+          placeholder="you@company.com"
+        />
+        {fieldError ? <span className="mt-2 block text-sm text-red-600">{fieldError}</span> : null}
+      </label>
 
       <button
         type="submit"
         disabled={isSubmitting}
         className="mt-6 w-full rounded-full bg-slate-950 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        Submit Confidential Inquiry
+        Start a Conversation
       </button>
-    </form>
-  );
-}
 
-function Field({
-  label,
-  error,
-  children,
-}: {
-  label: string;
-  error?: string;
-  children: ReactNode;
-}) {
-  return (
-    <label className="block">
-      <span className="text-sm font-semibold text-slate-700">{label}</span>
-      <div className="mt-2">{children}</div>
-      {error ? <span className="mt-2 block text-sm text-red-600">{error}</span> : null}
-    </label>
+      <p className="mt-4 text-center text-sm text-slate-600">
+        or simply email{" "}
+        <a href={`mailto:${site.email}`} className="font-semibold text-sky-700 hover:text-sky-600">
+          {site.email}
+        </a>
+      </p>
+    </form>
   );
 }

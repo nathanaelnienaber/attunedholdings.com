@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { heroFitCardRows, site, trustSignals } from "@/lib/site";
+import { site, trustSignals } from "@/lib/site";
 
 export function HeroSection() {
   return (
@@ -14,12 +14,12 @@ export function HeroSection() {
           className="object-cover"
         />
       </div>
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-32">
-        <div>
+      <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+        <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">
             Washington operator buyer
           </p>
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Building a company where people can grow old in.
           </h1>
           <p className="mt-6 max-w-2xl text-xl leading-8 text-slate-200">
@@ -51,20 +51,6 @@ export function HeroSection() {
               >
                 {signal}
               </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-3xl border border-white/10 bg-white/95 p-6 shadow-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">
-            Operator Fit
-          </p>
-          <div className="mt-6 grid gap-4">
-            {heroFitCardRows.map((row) => (
-              <div key={row.label} className="rounded-2xl bg-slate-50 p-5">
-                <p className="text-sm font-medium text-slate-500">{row.label}</p>
-                <p className="mt-2 text-2xl font-bold text-slate-950">{row.value}</p>
-              </div>
             ))}
           </div>
         </div>
