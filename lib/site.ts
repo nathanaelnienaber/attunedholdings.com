@@ -18,7 +18,7 @@ export const site = {
   name: "Nathanael Nienaber",
   founder: "Nathanael Nienaber",
   entity: "Attuned Holdings",
-  entityType: "C-Corp",
+  entityType: "LLC",
   email: "nathanael@attunedholdings.com",
   phone: "+1-425-563-5652",
   location: "Bellevue, WA",
@@ -79,8 +79,9 @@ export const trustSignals = [
   "MBA",
   "PMP",
   "Cloud Genius",
-  "ROBS Ready",
-  "Legal Vehicle: Attuned Holdings C-Corp",
+  "$1.5M+ Deployable Capital",
+  "SBA Pre-Qualified Up To $8M",
+  "Legal Vehicle: Attuned Holdings LLC",
 ];
 
 export type Feature = {
@@ -113,7 +114,7 @@ export const criteriaCards: Feature[] = [
   {
     title: "Deal Structure",
     description:
-      "$1M+ equity via ROBS through Attuned Holdings with openness to SBA and seller financing.",
+      "$1.5M+ deployable capital with lender pre-qualification up to $8M. Open to SBA, bank debt, seller notes, earnouts, and hybrid structures.",
     icon: Handshake,
   },
   {
