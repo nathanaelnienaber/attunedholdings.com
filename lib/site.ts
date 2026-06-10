@@ -1,18 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import {
-  BadgeDollarSign,
-  BriefcaseBusiness,
-  Building2,
-  CheckCircle2,
-  Cpu,
-  Factory,
-  Handshake,
-  LineChart,
-  MapPin,
-  Network,
-  ShieldCheck,
-  Users,
-} from "lucide-react";
+import { CheckCircle2, Users } from "lucide-react";
 
 export const site = {
   name: "Nathanael Nienaber",
@@ -58,30 +45,111 @@ export const booking = {
     },
     {
       id: "in-person",
-      label: "In-person",
+      label: "In person",
       description: "Meet in Bellevue, WA.",
       calLink: "nathanaelnienaber/in-person",
     },
   ],
 } as const;
 
+export const sectionIds = {
+  fit: "fit",
+  story: "story",
+  capital: "capital",
+  approach: "approach",
+  contact: "contact",
+} as const;
+
 export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/criteria", label: "Criteria" },
-  { href: "/financing", label: "Financing" },
-  { href: "/value-add", label: "Value Add" },
-  { href: "/contact", label: "Contact" },
+  { href: "#fit", label: "Fit", sectionId: sectionIds.fit },
+  { href: "#story", label: "Story", sectionId: sectionIds.story },
+  { href: "#capital", label: "Capital", sectionId: sectionIds.capital },
+  { href: "#approach", label: "Approach", sectionId: sectionIds.approach },
+  { href: "#contact", label: "Contact", sectionId: sectionIds.contact },
 ];
 
+export const dealProfileRows = [
+  { label: "Geography", value: "Washington State (Seattle / Bellevue metro preferred)" },
+  { label: "Revenue", value: "$1M to $15M+ annual revenue" },
+  { label: "EBITDA / SDE", value: "$250K to $2M earnings" },
+  { label: "Deployable Capital", value: "$1.5M+ equity" },
+  { label: "Pre-Qualification", value: "Up to $8M acquisition size" },
+  { label: "Closing Readiness", value: "30 to 45 days from LOI" },
+] as const;
+
+export const heroFitCardRows = [
+  { label: "Revenue Target", value: "$1M to $15M+" },
+  { label: "EBITDA / SDE", value: "$250K to $2M" },
+  { label: "Deployable Capital", value: "$1.5M+" },
+  { label: "Pre-Qualification", value: "Up to $8M acquisition" },
+  { label: "Closing Readiness", value: "30 to 45 days from LOI" },
+] as const;
+
+export const idealSituations = [
+  {
+    title: "Outdated IT",
+    description:
+      "Legacy systems create drag but the underlying business and customer relationships are strong.",
+  },
+  {
+    title: "Manual Processes",
+    description:
+      "Heavy paper workflows and tribal knowledge that can be systematized without disrupting service delivery.",
+  },
+  {
+    title: "Founder Retirement",
+    description:
+      "A planned transition where continuity for employees and customers matters as much as valuation.",
+  },
+  {
+    title: "Existing Management",
+    description:
+      "A leadership team already in place that can run day to day operations through transition.",
+  },
+  {
+    title: "Recurring Revenue",
+    description:
+      "Contract or repeat revenue that supports long term planning and stable employment.",
+  },
+] as const;
+
+export const financingStructures = [
+  { label: "SBA 7(a)", hint: "Efficient leverage for qualified lower middle market deals" },
+  { label: "Conventional Bank Debt", hint: "Senior financing where terms and profile are the best fit" },
+  {
+    label: "ROBS",
+    hint: "Rollover for Business Startups. Retirement funds into the acquisition when it fits.",
+  },
+  { label: "Seller Note", hint: "Aligns interests and can improve overall terms" },
+  { label: "Earnout", hint: "Performance based upside tied to agreed milestones" },
+  { label: "Rollover Equity", hint: "Minority upside for owners who want to stay invested" },
+  { label: "Hybrid Structures", hint: "Debt, seller paper, earnout, and equity combined" },
+] as const;
+
+export const capitalCoInvestNote =
+  "For the right opportunity, I'm open to a small number of passive investors who fit a long term operator model. Patient capital, clear governance, and no pressure to flip the business.";
+
+export const afterCloseOutcomes = [
+  "Your team stays intact. Upgrades are sequenced around trust and continuity, not disruption.",
+  "Systems modernize in phases. Cloud, ERP, and automation only where they reduce friction, not for their own sake.",
+  "The founder's legacy is honored. Customers keep the relationships they trust while the business gets stronger.",
+] as const;
+
+export const approachSummary =
+  "I bring enterprise transformation experience, founder operating grit, and a technologist's eye for practical systems. Improvements are measured by business continuity, team trust, and operating outcomes, not change for its own sake.";
+
+export const credentials =
+  "MBA from Northwest University. PMP. Former founder, owner and operator. Technologist.";
+
 export const trustSignals = [
-  "Ex-Boeing",
+  "Former founder and operator",
+  "Family business roots",
+  "Former Boeing",
   "MBA",
   "PMP",
-  "Cloud Genius",
-  "$1.5M+ Deployable Capital",
-  "SBA Pre-Qualified Up To $8M",
-  "Legal Vehicle: Attuned Holdings LLC",
+  "$1.5M+ deployable capital",
+  "SBA pre qualified up to $8M",
+  "Attuned Holdings LLC",
 ];
 
 export type Feature = {
@@ -89,9 +157,6 @@ export type Feature = {
   description: string;
   icon: LucideIcon;
 };
-
-export const industryFocusIntro =
-  "We concentrate on essential, service-based industries, including:";
 
 export const essentialIndustries = [
   "Fire & life safety services",
@@ -101,34 +166,7 @@ export const essentialIndustries = [
   "Adjacent B2B service categories with recurring revenue characteristics",
 ];
 
-export const criteriaCards: Feature[] = [
-  {
-    title: "Industries",
-    description:
-      "Essential service-based businesses: fire & life safety, compliance & inspection, MSPs, commercial field services, and adjacent B2B services with recurring revenue.",
-    icon: Factory,
-  },
-  {
-    title: "Geography",
-    description: "Washington State, with preference for Seattle and Bellevue metro businesses.",
-    icon: MapPin,
-  },
-  {
-    title: "Revenue",
-    description: "$1M - $15M+ in annual revenue with durable customer relationships.",
-    icon: LineChart,
-  },
-  {
-    title: "EBITDA / SDE",
-    description: "$250K - $2M in earnings with room for disciplined operational growth.",
-    icon: BadgeDollarSign,
-  },
-  {
-    title: "Deal Structure",
-    description:
-      "$1.5M+ deployable capital with lender pre-qualification up to $8M. Open to SBA, bank debt, seller notes, earnouts, and hybrid structures.",
-    icon: Handshake,
-  },
+export const dealDetailCards: Feature[] = [
   {
     title: "Ideal Pain Points",
     description: "Outdated IT, manual processes, founder retirement, and modernization needs.",
@@ -142,42 +180,23 @@ export const criteriaCards: Feature[] = [
   },
 ];
 
-export const valueAddCards: Feature[] = [
-  {
-    title: "IT Modernization",
-    description: "Cloud migration, ERP implementation, Zero Trust Architecture, and secure infrastructure.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Operations",
-    description: "Process automation, lean methodologies, supply chain optimization, and workflow clarity.",
-    icon: Cpu,
-  },
-  {
-    title: "Growth",
-    description:
-      "Digital marketing systems, customer visibility, and data-driven decisions that strengthen the business.",
-    icon: Network,
-  },
-  {
-    title: "Culture",
-    description: "I honor the founder's legacy. Your team stays intact.",
-    icon: Users,
-  },
-];
-
 export const aboutTimeline = [
   {
+    title: "Family business",
+    description: "Grew up in a blue collar family business, doing whatever the day required.",
+  },
+  {
     title: "Georgia-Pacific",
-    description: "Built early operating discipline in industrial environments and process-oriented teams.",
+    description: "Built early operating discipline in industrial environments and process oriented teams.",
   },
   {
-    title: "Ghostruck Founder",
-    description: "Raised $3M and scaled the logistics platform to 18 cities.",
+    title: "Ghostruck",
+    description: "Founded and operated the company. Raised $3M and scaled to 18 cities.",
   },
   {
-    title: "Boeing Transformation Leader",
-    description: "Spent 5+ years as a Technical Product Manager, Chief of Staff for CDO and led modernization of 30+ year legacy systems.",
+    title: "Boeing",
+    description:
+      "Spent 5+ years as a Technical Product Manager, Chief of Staff for CDO, and led modernization of 30+ year legacy systems.",
   },
 ];
 
@@ -237,6 +256,3 @@ export const schemaData = [
     },
   },
 ];
-
-export const IconBriefcase = BriefcaseBusiness;
-export const IconBuilding = Building2;

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { navItems, site, socialLinks } from "@/lib/site";
 
@@ -12,9 +11,9 @@ export function Footer() {
             Operating as {site.entity}
           </p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-300">
-            Operator-buyer pursuing enduring Washington essential service businesses
-            — fire & life safety, compliance, MSPs, commercial field services, and
-            adjacent recurring B2B services — with durable teams and long-term
+            Operator buyer pursuing enduring Washington essential service businesses:
+            fire and life safety, compliance, MSPs, commercial field services, and
+            adjacent recurring B2B services. I care about durable teams and long term
             continuity.
           </p>
         </div>
@@ -25,9 +24,9 @@ export function Footer() {
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-slate-300">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-white">
+              <a key={item.href} href={item.href} className="hover:text-white">
                 {item.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -68,7 +67,7 @@ export function Footer() {
         <p>
           © 2026 Nathanael Nienaber. Operating as Attuned Holdings. All rights reserved.
         </p>
-        <a href="/contact" className="mt-2 inline-block hover:text-white">
+        <a href="#contact" className="mt-2 inline-block hover:text-white">
           Legal Entity to conduct search efforts: Attuned Holdings LLC
         </a>
       </div>

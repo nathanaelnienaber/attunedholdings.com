@@ -123,7 +123,7 @@ export function ContactForm() {
         <Field label="Revenue" error={errors.revenue?.message}>
           <input
             className="form-input"
-            placeholder="$2.5M - $10M"
+            placeholder="$2.5M to $10M"
             {...register("revenue")}
           />
         </Field>
