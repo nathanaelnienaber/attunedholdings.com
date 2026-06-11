@@ -50,6 +50,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </head>
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         <script
           type="application/ld+json"
