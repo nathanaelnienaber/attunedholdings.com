@@ -9,7 +9,7 @@ type DealSheetProps = {
 
 export function DealSheet({ rows }: DealSheetProps) {
   return (
-    <dl className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <dl className="divide-y divide-slate-200 rounded-5 border border-slate-200 bg-white shadow-sm">
       {rows.map((row) => (
         <div
           key={row.label}

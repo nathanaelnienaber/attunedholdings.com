@@ -38,7 +38,7 @@ export function ContactSection() {
 
         <div className="mt-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <aside className="space-y-6">
-            <div className="rounded-3xl bg-slate-950 p-8 text-white">
+            <div className="rounded-5 bg-slate-950 p-8 text-white">
               <ShieldCheck className="h-10 w-10 text-sky-300" />
               <h3 className="mt-5 text-2xl font-bold">Direct and confidential.</h3>
               <p className="mt-4 leading-7 text-slate-300">

@@ -87,14 +87,14 @@ export function Header() {
 
         <a
           href="#contact"
-          className="hidden rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 lg:inline-flex"
+          className="hidden rounded-5 bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 lg:inline-flex"
         >
           Discuss a Business
         </a>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
+          className="inline-flex items-center justify-center rounded-5 p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((current) => !current)}
@@ -110,7 +110,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600"
+                className="rounded-5 px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600"
                 onClick={handleNavClick}
               >
                 {item.label}
@@ -118,7 +118,7 @@ export function Header() {
             ))}
             <a
               href="#contact"
-              className="rounded-lg bg-slate-950 px-3 py-2 text-center text-base font-semibold text-white hover:bg-sky-600"
+              className="rounded-5 bg-slate-950 px-3 py-2 text-center text-base font-semibold text-white hover:bg-sky-600"
               onClick={handleNavClick}
             >
               Discuss a Business

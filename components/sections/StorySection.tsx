@@ -17,9 +17,9 @@ export function StorySection() {
         />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="relative h-[420px] overflow-hidden rounded-3xl shadow-xl lg:sticky lg:top-28">
+          <div className="relative h-[420px] overflow-hidden rounded-5 shadow-xl lg:sticky lg:top-28">
             <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+              src="/IMG_4193.jpg"
               alt="Professional leadership meeting"
               fill
               className="object-cover"

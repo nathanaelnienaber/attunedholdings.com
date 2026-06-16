@@ -26,7 +26,7 @@ export function CapitalSection() {
           <p className="mt-8 max-w-3xl leading-8 text-slate-300">{capitalCoInvestNote}</p>
         </div>
 
-        <div className="mt-14 rounded-3xl border border-white/10 bg-white/5 p-8 lg:p-10">
+        <div className="mt-14 rounded-5 border border-white/10 bg-white/5 p-8 lg:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">
             SBA Pre Approval
           </p>
@@ -42,14 +42,14 @@ export function CapitalSection() {
               href="/sba-pre-approval-letter.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-400"
+              className="inline-flex items-center justify-center rounded-5 bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-400"
             >
               View letter
             </a>
             <a
               href="/sba-pre-approval-letter.pdf"
               download
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
+              className="inline-flex items-center justify-center rounded-5 border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
             >
               Download PDF
             </a>

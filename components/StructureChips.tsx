@@ -14,7 +14,7 @@ export function StructureChips({ structures, dark = false }: StructureChipsProps
       {structures.map((structure) => (
         <li key={structure.label}>
           <span
-            className={`inline-flex flex-col rounded-full px-4 py-2 text-sm font-semibold ${
+            className={`inline-flex flex-col rounded-5 px-4 py-2 text-sm font-semibold ${
               dark
                 ? "border border-white/20 bg-white/10 text-white"
                 : "border border-slate-200 bg-white text-slate-800"

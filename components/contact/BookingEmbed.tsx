@@ -32,7 +32,7 @@ export function BookingEmbed() {
               key={event.id}
               type="button"
               onClick={() => setSelectedId(event.id)}
-              className={`rounded-2xl border p-5 text-left transition ${
+              className={`rounded-5 border p-5 text-left transition ${
                 isSelected
                   ? "border-sky-600 bg-sky-50 shadow-sm"
                   : "border-slate-200 bg-slate-50 hover:border-sky-300 hover:shadow-sm"
@@ -49,7 +49,7 @@ export function BookingEmbed() {
         })}
       </div>
 
-      <div className="mt-8 overflow-auto rounded-3xl border border-slate-200 bg-white">
+      <div className="mt-8 overflow-auto rounded-5 border border-slate-200 bg-white">
         <Cal
           key={selectedEvent.id}
           calLink={selectedEvent.calLink}

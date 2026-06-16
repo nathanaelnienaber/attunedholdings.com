@@ -52,15 +52,15 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-3xl bg-white p-6 shadow-xl lg:p-8">
+    <form onSubmit={onSubmit} className="rounded-5 bg-white p-6 shadow-xl lg:p-8">
       {submitted ? (
-        <div className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium text-emerald-800">
+        <div className="mb-6 rounded-5 border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium text-emerald-800">
           Thank you. I&apos;ll follow up at the email address you provided.
         </div>
       ) : null}
 
       {submitError ? (
-        <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
+        <div className="mb-6 rounded-5 border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-800">
           {submitError}
         </div>
       ) : null}
@@ -81,7 +81,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-6 w-full rounded-full bg-slate-950 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-6 w-full rounded-5 bg-slate-950 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-600 disabled:cursor-not-allowed disabled:opacity-70"
       >
         Start a Conversation
       </button>

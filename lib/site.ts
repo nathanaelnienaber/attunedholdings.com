@@ -1,5 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import { CheckCircle2, Users } from "lucide-react";
 
 export const site = {
   name: "Nathanael Nienaber",
@@ -158,19 +157,6 @@ export const essentialIndustries = [
   "Adjacent B2B service categories with recurring revenue characteristics",
 ];
 
-export const dealDetailCards: Feature[] = [
-  {
-    title: "Ideal Pain Points",
-    description: "Outdated IT, manual processes, founder retirement, and modernization needs.",
-    icon: CheckCircle2,
-  },
-  {
-    title: "Business Profile",
-    description:
-      "Existing management layer, recurring or repeat revenue, and a business that can run without the owner for short periods.",
-    icon: Users,
-  },
-];
 
 export const aboutTimeline = [
   {

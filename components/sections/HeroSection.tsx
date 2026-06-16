@@ -31,14 +31,14 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#fit"
-              className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-sky-950/20 transition hover:bg-sky-400"
+              className="inline-flex items-center justify-center rounded-5 bg-sky-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-sky-950/20 transition hover:bg-sky-400"
             >
               View Acquisition Fit
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
+              className="inline-flex items-center justify-center rounded-5 border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
             >
               Discuss a Business
             </a>
@@ -47,7 +47,7 @@ export function HeroSection() {
             {trustSignals.map((signal) => (
               <span
                 key={signal}
-                className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur"
+                className="rounded-5 border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur"
               >
                 {signal}
               </span>
