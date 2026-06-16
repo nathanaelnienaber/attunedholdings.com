@@ -33,17 +33,15 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <aside className="space-y-6">
-            <div className="rounded-5 bg-dark p-8 text-white">
-              <ShieldCheck className="h-10 w-10 text-accent-light" />
-              <h3 className="subheading mt-5 text-white">Direct and confidential.</h3>
-              <p className="body-dark mt-4 leading-7">
-                I am prepared to sign an NDA and review high-level materials
-                quickly when a business fits the stated criteria.
-              </p>
-            </div>
-          </aside>
+        <div className="mt-20 flex flex-col gap-10">
+          <div className="rounded-5 bg-dark p-8 text-white">
+            <ShieldCheck className="h-10 w-10 text-accent-light" />
+            <h3 className="subheading mt-5 text-white">Direct and confidential.</h3>
+            <p className="body-dark mt-4 leading-7">
+              I am prepared to sign an NDA and review high-level materials
+              quickly when a business fits the stated criteria.
+            </p>
+          </div>
 
           <ContactForm />
         </div>

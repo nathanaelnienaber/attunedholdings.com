@@ -79,6 +79,10 @@ body {
   @apply text-lg leading-8 text-slate-300;
 }
 
+.statement {
+  @apply text-xl font-medium italic leading-8 tracking-tight text-text sm:text-2xl sm:leading-9 lg:text-3xl lg:leading-snug;
+}
+
 /* Buttons */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-5 bg-accent px-6 py-3 text-base font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:bg-sky-400;

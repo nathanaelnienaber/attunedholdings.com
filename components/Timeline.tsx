@@ -13,7 +13,7 @@ export function Timeline({ items }: TimelineProps) {
       {items.map((item) => (
         <li key={item.title} className="relative">
           <span
-            className="absolute -left-[2.45rem] top-1.5 h-4 w-4 rounded-5 border-2 border-sky-600 bg-white"
+            className="absolute -left-[2.45rem] top-1.5 h-4 w-4 rounded-full border-2 border-sky-600 bg-white"
             aria-hidden="true"
           />
           <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
