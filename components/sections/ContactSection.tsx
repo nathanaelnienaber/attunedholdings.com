@@ -14,11 +14,8 @@ const BookingEmbed = dynamic(
 
 export function ContactSection() {
   return (
-    <section
-      id={sectionIds.contact}
-      className="scroll-mt-24 bg-slate-50 px-6 py-20 lg:px-8"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id={sectionIds.contact} className="section section-y scroll-mt-24 bg-surface">
+      <div className="container">
         <SectionIntro
           eyebrow="Contact"
           title="Share a confidential acquisition opportunity."
@@ -26,8 +23,8 @@ export function ContactSection() {
         />
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold tracking-tight text-slate-950">Book a meeting</h3>
-          <p className="mt-4 max-w-2xl leading-7 text-slate-600">
+          <h3 className="subheading">Book a meeting</h3>
+          <p className="body mt-4 leading-7">
             Pick a call type, then day, then time slot. You will need to enter
             your email and phone number so I can reach you and send a meeting reminder.
           </p>
@@ -38,10 +35,10 @@ export function ContactSection() {
 
         <div className="mt-20 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <aside className="space-y-6">
-            <div className="rounded-5 bg-slate-950 p-8 text-white">
-              <ShieldCheck className="h-10 w-10 text-sky-300" />
-              <h3 className="mt-5 text-2xl font-bold">Direct and confidential.</h3>
-              <p className="mt-4 leading-7 text-slate-300">
+            <div className="rounded-5 bg-dark p-8 text-white">
+              <ShieldCheck className="h-10 w-10 text-accent-light" />
+              <h3 className="subheading mt-5 text-white">Direct and confidential.</h3>
+              <p className="body-dark mt-4 leading-7">
                 I am prepared to sign an NDA and review high-level materials
                 quickly when a business fits the stated criteria.
               </p>

@@ -6,16 +6,11 @@ const config = {
     "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-      extend: {
-        borderRadius: {
-          '5': '5px',
-        },
-        colors: {
-          navy: "#0f172a",
-          accent: "#0ea5e9",
-          canvas: "#f8fafc",
-        },
+    extend: {
+      borderRadius: {
+        5: "5px",
       },
+    },
   },
 };
 

@@ -58,7 +58,7 @@ export function BookingEmbed() {
         />
       </div>
 
-      <p className="mt-4 text-center text-sm text-slate-500">
+      <p className="mt-4 text-sm text-slate-500">
         Calendar not loading?{" "}
         <a
           href={bookingUrl}

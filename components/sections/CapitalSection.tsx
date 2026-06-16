@@ -4,11 +4,8 @@ import { capitalCoInvestNote, financingStructures, sectionIds } from "@/lib/site
 
 export function CapitalSection() {
   return (
-    <section
-      id={sectionIds.capital}
-      className="scroll-mt-24 bg-slate-950 px-6 py-20 text-white lg:px-8"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id={sectionIds.capital} className="section section-y scroll-mt-24 bg-dark text-white">
+      <div className="container">
         <SectionIntro
           dark
           eyebrow="Capital"
@@ -17,23 +14,19 @@ export function CapitalSection() {
         />
 
         <div className="mt-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
-            Open to all forms of financing
-          </p>
+          <p className="eyebrow-dark">Open to all forms of financing</p>
           <div className="mt-5">
             <StructureChips structures={financingStructures} dark />
           </div>
-          <p className="mt-8 max-w-3xl leading-8 text-slate-300">{capitalCoInvestNote}</p>
+          <p className="body-dark mt-8">{capitalCoInvestNote}</p>
         </div>
 
         <div className="mt-14 rounded-5 border border-white/10 bg-white/5 p-8 lg:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">
-            SBA Pre Approval
-          </p>
-          <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
+          <p className="eyebrow-dark">SBA Pre Approval</p>
+          <h3 className="subheading mt-4 text-white sm:text-3xl">
             Broker issued SBA pre approval letter for up to $8M.
           </h3>
-          <p className="mt-5 max-w-2xl leading-8 text-slate-300">
+          <p className="body-dark mt-5">
             This letter supports early stage diligence conversations with owners, brokers,
             and advisors evaluating transaction readiness and close certainty.
           </p>
@@ -42,15 +35,11 @@ export function CapitalSection() {
               href="/sba-pre-approval-letter.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-5 bg-sky-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-sky-400"
+              className="btn-primary shadow-none"
             >
               View letter
             </a>
-            <a
-              href="/sba-pre-approval-letter.pdf"
-              download
-              className="inline-flex items-center justify-center rounded-5 border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950"
-            >
+            <a href="/sba-pre-approval-letter.pdf" download className="btn-secondary">
               Download PDF
             </a>
           </div>
@@ -60,11 +49,11 @@ export function CapitalSection() {
           </p>
         </div>
 
-        <p className="mt-10 max-w-3xl text-sm leading-7 text-slate-400">
+        <p className="mt-10 text-sm leading-7 text-slate-400">
           Financing statements are provided for discussion purposes only and do not
           constitute a commitment to lend or acquire. All transactions are subject to
           underwriting, diligence, legal documentation, and final negotiated terms.{" "}
-          <a href="#contact" className="text-sky-300 underline-offset-2 hover:underline">
+          <a href="#contact" className="text-accent-light underline-offset-2 hover:underline">
             Discuss a fit
           </a>
           .

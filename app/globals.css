@@ -2,25 +2,90 @@
 @config "../tailwind.config.js";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-accent: #0ea5e9;
+  --color-accent-light: #7dd3fc;
+  --color-dark: #0f172a;
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --color-dark: var(--color-dark);
   --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: #0ea5e9;
+  background: var(--color-accent);
   color: #ffffff;
+}
+
+/* Layout */
+.section {
+  @apply px-6 lg:px-8;
+}
+
+.container {
+  @apply mx-auto max-w-7xl;
+}
+
+.section-y {
+  @apply py-20;
+}
+
+/* Typography */
+.eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.25em] text-accent;
+}
+
+.eyebrow-dark {
+  @apply text-sm font-semibold uppercase tracking-[0.25em] text-accent-light;
+}
+
+.heading {
+  @apply text-3xl font-bold tracking-tight text-text sm:text-4xl;
+}
+
+.heading-dark {
+  @apply text-3xl font-bold tracking-tight text-white sm:text-4xl;
+}
+
+.subheading {
+  @apply text-2xl font-bold tracking-tight text-text;
+}
+
+.body {
+  @apply text-lg leading-8 text-muted;
+}
+
+.body-dark {
+  @apply text-lg leading-8 text-slate-300;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-5 bg-accent px-6 py-3 text-base font-semibold text-white shadow-lg shadow-slate-950/20 transition hover:bg-sky-400;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-5 border border-white/30 px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-slate-950;
 }
 
 .form-input {
@@ -29,7 +94,7 @@ body {
   border: 1px solid #cbd5e1;
   background: #ffffff;
   padding: 0.75rem 1rem;
-  color: #0f172a;
+  color: var(--color-text);
   outline: none;
   transition:
     border-color 150ms ease,
@@ -37,6 +102,6 @@ body {
 }
 
 .form-input:focus {
-  border-color: #0ea5e9;
+  border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgb(14 165 233 / 0.16);
 }

@@ -86,7 +86,7 @@ export function ContactForm() {
         Start a Conversation
       </button>
 
-      <p className="mt-4 text-center text-sm text-slate-600">
+      <p className="mt-4 text-sm text-slate-600">
         or simply email{" "}
         <a href={`mailto:${site.email}`} className="font-semibold text-sky-700 hover:text-sky-600">
           {site.email}

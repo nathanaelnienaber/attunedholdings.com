@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navItems, sectionIds, site } from "@/lib/site";
@@ -48,9 +47,9 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="section sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
+        className="container flex items-center justify-between py-4"
         aria-label="Primary navigation"
       >
         <a
@@ -58,7 +57,7 @@ export function Header() {
           className="flex min-w-0 flex-col sm:flex-row sm:items-baseline sm:gap-3"
           onClick={handleNavClick}
         >
-          <span className="text-xl font-extrabold tracking-tight text-slate-950 sm:text-2xl">
+          <span className="text-xl font-extrabold tracking-tight text-text sm:text-2xl">
             {site.name}
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.16em] text-sky-700 sm:text-[0.7rem]">
@@ -74,8 +73,8 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-semibold transition hover:text-sky-600 ${
-                  isActive ? "text-sky-600" : "text-slate-700"
+                className={`text-sm font-semibold transition hover:text-accent ${
+                  isActive ? "text-accent" : "text-slate-700"
                 }`}
                 aria-current={isActive ? "true" : undefined}
               >
@@ -87,7 +86,7 @@ export function Header() {
 
         <a
           href="#contact"
-          className="hidden rounded-5 bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 lg:inline-flex"
+          className="hidden rounded-5 bg-dark px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-accent lg:inline-flex"
         >
           Discuss a Business
         </a>
@@ -104,13 +103,13 @@ export function Header() {
       </nav>
 
       {isOpen ? (
-        <div className="border-t border-slate-200 bg-white px-6 py-4 shadow-sm lg:hidden">
-          <div className="flex flex-col gap-3">
+        <div className="section border-t border-slate-200 bg-white py-4 shadow-sm lg:hidden">
+          <div className="container flex flex-col gap-3">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-5 px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-sky-600"
+                className="rounded-5 px-3 py-2 text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-accent"
                 onClick={handleNavClick}
               >
                 {item.label}
@@ -118,7 +117,7 @@ export function Header() {
             ))}
             <a
               href="#contact"
-              className="rounded-5 bg-slate-950 px-3 py-2 text-center text-base font-semibold text-white hover:bg-sky-600"
+              className="rounded-5 bg-dark px-3 py-2 text-base font-semibold text-white hover:bg-accent"
               onClick={handleNavClick}
             >
               Discuss a Business
