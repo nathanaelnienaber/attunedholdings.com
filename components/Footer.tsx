@@ -1,5 +1,5 @@
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
-import { navItems, site, socialLinks } from "@/lib/site";
+import { footerTagline, navItems, site, socialLinks } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -10,12 +10,7 @@ export function Footer() {
           <p className="mt-1 text-sm font-semibold text-accent-light">
             Operating as {site.entity}
           </p>
-          <p className="mt-3 text-sm leading-6 text-slate-300">
-            Operator buyer pursuing enduring Washington essential service businesses:
-            fire and life safety, compliance, MSPs, commercial field services, and
-            adjacent recurring B2B services. I care about durable teams and long term
-            continuity.
-          </p>
+          <p className="mt-3 text-sm leading-6 text-slate-300">{footerTagline}</p>
         </div>
 
         <div>

@@ -61,9 +61,8 @@ export const sectionIds = {
 
 export const navItems = [
   { href: "#fit", label: "Fit", sectionId: sectionIds.fit },
-  { href: "#story", label: "Story", sectionId: sectionIds.story },
+  { href: "#story", label: "Background", sectionId: sectionIds.story },
   { href: "#capital", label: "Capital", sectionId: sectionIds.capital },
-  { href: "#approach", label: "Approach", sectionId: sectionIds.approach },
   { href: "#contact", label: "Contact", sectionId: sectionIds.contact },
 ];
 
@@ -120,28 +119,36 @@ export const financingStructures = [
 export const capitalCoInvestNote =
   "For the right opportunity, I'm open to a small number of passive investors who fit a long term operator model. Patient capital, clear governance, and no pressure to flip the business.";
 
+export const capitalIntroDescription =
+  "I have $1.5M+ in deployable capital and lender pre qualification up to $8M.";
+
 export const afterCloseOutcomes = [
   "Your team stays intact. Upgrades are sequenced around trust and continuity, not disruption.",
   "Systems modernize in phases. Cloud, ERP, and automation only where they reduce friction, not for their own sake.",
   "The founder's legacy is honored. Customers keep the relationships they trust while the business gets stronger.",
 ] as const;
 
-export const approachSummary =
-  "I bring enterprise transformation experience, founder operating grit, and a technologist's eye for practical systems. Improvements are measured by business continuity, team trust, and operating outcomes, not change for its own sake.";
-
 export const credentials =
   "MBA from Northwest University. PMP. Former founder, owner and operator. Technologist.";
 
 export const trustSignals = [
   "Former founder and operator",
-  "Family business roots",
   "Former Boeing",
-  "MBA",
-  "PMP",
   "$1.5M+ deployable capital",
   "SBA pre qualified up to $8M",
-  "Attuned Holdings LLC",
 ];
+
+export const heroDescription =
+  "I'm Nathanael Nienaber, a former founder and operator acquiring a Washington service business through Attuned Holdings LLC. I'm not a fund flipping assets — I'm here to protect what works, strengthen the team, and build something that lasts.";
+
+export const storyIntro =
+  "I founded and operated Ghostruck, then spent years at Boeing leading transformation on legacy systems. I'm preparing to be the owner and operator who shows up in the business, works with the team, and protects what already works.";
+
+export const contactIntroDescription =
+  "Founder, broker, lender, and advisor conversations are welcomed. NDA review is available before sensitive materials are exchanged.";
+
+export const footerTagline =
+  "Operator buyer pursuing enduring Washington essential service businesses with a focus on durable teams and long term continuity.";
 
 export type Feature = {
   title: string;

@@ -1,5 +1,5 @@
 type SectionIntroProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   className?: string;
@@ -15,10 +15,12 @@ export function SectionIntro({
 }: SectionIntroProps) {
   return (
     <div className={className}>
-      <p className={dark ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</p>
-      <h2 className={`mt-4 ${dark ? "heading-dark" : "heading"}`}>{title}</h2>
+      {eyebrow ? (
+        <p className={dark ? "eyebrow-dark" : "eyebrow"}>{eyebrow}</p>
+      ) : null}
+      <h2 className={`${eyebrow ? "mt-4" : ""} ${dark ? "heading-dark" : "heading"}`}>{title}</h2>
       {description ? (
-        <p className={`mt-5 ${dark ? "body-dark" : "body"}`}>{description}</p>
+        <p className={`prose-narrow mt-5 ${dark ? "body-dark" : "body"}`}>{description}</p>
       ) : null}
     </div>
   );

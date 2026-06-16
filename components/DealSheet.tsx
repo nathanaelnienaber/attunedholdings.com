@@ -18,7 +18,7 @@ export function DealSheet({ rows }: DealSheetProps) {
           <dt className="text-sm font-semibold uppercase tracking-wide text-slate-500">
             {row.label}
           </dt>
-          <dd className="text-lg font-semibold text-slate-950">{row.value}</dd>
+          <dd className="text-base font-medium text-slate-950">{row.value}</dd>
         </div>
       ))}
     </dl>

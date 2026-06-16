@@ -1,8 +1,7 @@
 import dynamic from "next/dynamic";
-import { ShieldCheck } from "lucide-react";
-import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactFormToggle } from "@/components/contact/ContactFormToggle";
 import { SectionIntro } from "@/components/SectionIntro";
-import { sectionIds } from "@/lib/site";
+import { contactIntroDescription, sectionIds } from "@/lib/site";
 
 const BookingEmbed = dynamic(
   () => import("@/components/contact/BookingEmbed").then((module) => module.BookingEmbed),
@@ -19,31 +18,21 @@ export function ContactSection() {
         <SectionIntro
           eyebrow="Contact"
           title="Share a confidential acquisition opportunity."
-          description="Founder, broker, lender, and advisor conversations are welcomed. NDA review is available before sensitive materials are exchanged."
+          description={contactIntroDescription}
         />
 
         <div className="mt-12">
           <h3 className="subheading">Book a meeting</h3>
-          <p className="body mt-4 leading-7">
-            Pick a call type, then day, then time slot. You will need to enter
-            your email and phone number so I can reach you and send a meeting reminder.
+          <p className="prose-narrow body mt-4">
+            Pick a call type, day, and time slot. Enter your email and phone for a reminder.
           </p>
           <div className="mt-10">
             <BookingEmbed />
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col gap-10">
-          <div className="rounded-5 bg-dark p-8 text-white">
-            <ShieldCheck className="h-10 w-10 text-accent-light" />
-            <h3 className="subheading mt-5 text-white">Direct and confidential.</h3>
-            <p className="body-dark mt-4 leading-7">
-              I am prepared to sign an NDA and review high-level materials
-              quickly when a business fits the stated criteria.
-            </p>
-          </div>
-
-          <ContactForm />
+        <div className="mt-16">
+          <ContactFormToggle />
         </div>
       </div>
     </section>

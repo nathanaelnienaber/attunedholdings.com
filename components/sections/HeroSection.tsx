@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { site, trustSignals } from "@/lib/site";
+import { heroDescription, trustSignals } from "@/lib/site";
 
 export function HeroSection() {
   return (
@@ -16,14 +16,11 @@ export function HeroSection() {
       </div>
       <div className="container relative py-24 lg:py-32">
         <p className="eyebrow-dark">Washington operator buyer</p>
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        <h1 className="mt-6 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
           Building a company where people can grow old in.
         </h1>
-        <p className="mt-6 text-xl leading-8 text-slate-200">
-          I&apos;m {site.founder}, a former founder and operator acquiring a Washington
-          service business through {site.entity} {site.entityType}. I&apos;m not a fund flipping
-          assets. I&apos;m here to protect what works, strengthen the team, and build
-          something that lasts.
+        <p className="prose-narrow mt-6 text-xl leading-relaxed text-slate-200">
+          {heroDescription}
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a href="#fit" className="btn-primary">

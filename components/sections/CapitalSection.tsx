@@ -1,6 +1,6 @@
+import { FinancingStructureList } from "@/components/FinancingStructureList";
 import { SectionIntro } from "@/components/SectionIntro";
-import { StructureChips } from "@/components/StructureChips";
-import { capitalCoInvestNote, financingStructures, sectionIds } from "@/lib/site";
+import { capitalCoInvestNote, capitalIntroDescription, financingStructures, sectionIds } from "@/lib/site";
 
 export function CapitalSection() {
   return (
@@ -10,23 +10,23 @@ export function CapitalSection() {
           dark
           eyebrow="Capital"
           title="Credible capital with flexible structure options."
-          description="I have $1.5M+ in deployable capital and lender pre qualification up to $8M. Every deal is different. The goal is a structure that is financeable, fair, and executable."
+          description={capitalIntroDescription}
         />
 
         <div className="mt-10">
           <p className="eyebrow-dark">Open to all forms of financing</p>
           <div className="mt-5">
-            <StructureChips structures={financingStructures} dark />
+            <FinancingStructureList structures={financingStructures} dark />
           </div>
-          <p className="body-dark mt-8">{capitalCoInvestNote}</p>
+          <p className="prose-narrow body-dark mt-8">{capitalCoInvestNote}</p>
         </div>
 
-        <div className="mt-14 rounded-5 border border-white/10 bg-white/5 p-8 lg:p-10">
+        <div className="mt-16 rounded-5 border border-white/10 bg-white/5 p-8 lg:p-10">
           <p className="eyebrow-dark">SBA Pre Approval</p>
           <h3 className="subheading mt-4 text-white sm:text-3xl">
             Broker issued SBA pre approval letter for up to $8M.
           </h3>
-          <p className="body-dark mt-5">
+          <p className="prose-narrow body-dark mt-5">
             This letter supports early stage diligence conversations with owners, brokers,
             and advisors evaluating transaction readiness and close certainty.
           </p>
@@ -49,10 +49,10 @@ export function CapitalSection() {
           </p>
         </div>
 
-        <p className="mt-10 text-sm leading-7 text-slate-400">
-          Financing statements are provided for discussion purposes only and do not
-          constitute a commitment to lend or acquire. All transactions are subject to
-          underwriting, diligence, legal documentation, and final negotiated terms.{" "}
+        <p className="prose-narrow mt-10 text-sm leading-relaxed text-slate-400">
+          Financing statements are for discussion purposes only and do not constitute a
+          commitment to lend or acquire. All transactions are subject to underwriting,
+          diligence, and final negotiated terms.{" "}
           <a href="#contact" className="text-accent-light underline-offset-2 hover:underline">
             Discuss a fit
           </a>
