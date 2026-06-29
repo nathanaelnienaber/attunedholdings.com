@@ -106,16 +106,6 @@ export type Feature = {
   icon: LucideIcon;
 };
 
-export const idealIndustries = [
-  "Fire & Life Safety Services",
-  "Broader Compliance & Inspection Services",
-] as const;
-
-export const secondaryIndustries = [
-  "Commercial Security Systems",
-  "Commercial HVAC (commercial maintenance only)",
-] as const;
-
 export const aboutTimeline = [
   {
     title: "Family business",

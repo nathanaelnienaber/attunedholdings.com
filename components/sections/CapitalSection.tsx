@@ -39,16 +39,6 @@ export function CapitalSection() {
             standard SBA closing conditions.
           </p>
         </div>
-
-        <p className="prose-narrow mt-10 text-sm leading-relaxed text-slate-400">
-          Financing statements are for discussion purposes only and do not constitute a
-          commitment to lend or acquire. All transactions are subject to underwriting,
-          diligence, and final negotiated terms.{" "}
-          <a href="#contact" className="text-accent-light underline-offset-2 hover:underline">
-            Discuss a fit
-          </a>
-          .
-        </p>
       </div>
     </section>
   );
