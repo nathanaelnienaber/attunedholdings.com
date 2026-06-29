@@ -67,41 +67,15 @@ export const navItems = [
 ];
 
 export const dealProfileRows = [
-  { label: "Geography", value: "Washington State (Seattle / Bellevue metro preferred)" },
-  { label: "Revenue", value: "$1M to $15M+ annual revenue" },
-  { label: "EBITDA / SDE", value: "$250K to $2M earnings" },
-  { label: "Deployable Capital", value: "$1.5M+ equity" },
-  { label: "Pre-Qualification", value: "Up to $8M acquisition size" },
-  { label: "Closing Readiness", value: "30 to 45 days from LOI" },
+  { label: "Buyer type", value: "Self-funded searcher / owner-operator" },
+  { label: "Geography", value: "Within ~2 hours of Bellevue, WA" },
+  { label: "Ideal earnings", value: "$750K–$1M SDE (self-funded)" },
+  { label: "Larger deals", value: "$1M–$2M EBITDA (post-LOI investors)" },
+  { label: "Industry", value: "Industry agnostic" },
 ] as const;
 
-export const idealSituations = [
-  {
-    title: "Outdated IT",
-    description:
-      "Legacy systems create drag but the underlying business and customer relationships are strong.",
-  },
-  {
-    title: "Manual Processes",
-    description:
-      "Heavy paper workflows and tribal knowledge that can be systematized without disrupting service delivery.",
-  },
-  {
-    title: "Founder Retirement",
-    description:
-      "A planned transition where continuity for employees and customers matters as much as valuation.",
-  },
-  {
-    title: "Existing Management",
-    description:
-      "A leadership team already in place that can run day to day operations through transition.",
-  },
-  {
-    title: "Recurring Revenue",
-    description:
-      "Contract or repeat revenue that supports long term planning and stable employment.",
-  },
-] as const;
+export const fitIntroDescription =
+  "Self-funded searcher pursuing an owner-operator acquisition. Pre-qualified to purchase up to $8M individually. For larger opportunities, I can bring in post-LOI investors after fit is established.";
 
 export const financingStructures = [
   { label: "SBA 7(a)", hint: "Efficient leverage for qualified lower middle market deals" },
@@ -120,7 +94,7 @@ export const capitalCoInvestNote =
   "For the right opportunity, I'm open to a small number of passive investors who fit a long term operator model. Patient capital, clear governance, and no pressure to flip the business.";
 
 export const capitalIntroDescription =
-  "I have $1.5M+ in deployable capital and lender pre qualification up to $8M.";
+  "I have $1.5M+ in deployable capital and lender pre qualification up to $8M. I have access to investors post-LOI for larger deals.";
 
 export const afterCloseOutcomes = [
   "Your team stays intact. Upgrades are sequenced around trust and continuity, not disruption.",
@@ -129,7 +103,7 @@ export const afterCloseOutcomes = [
 ] as const;
 
 export const credentials =
-  "MBA from Northwest University. PMP. Former founder, owner and operator. Technologist.";
+  "Former founder, owner and operator. I know how to deal with employees with grease on their hands and employees with PhDs on their resumes.";
 
 export const trustSignals = [
   "Former founder and operator",
@@ -142,7 +116,7 @@ export const heroDescription =
   "I'm Nathanael Nienaber, a former founder and operator acquiring a Washington service business through Attuned Holdings LLC. I'm not a fund flipping assets — I'm here to protect what works, strengthen the team, and build something that lasts.";
 
 export const storyIntro =
-  "I founded and operated Ghostruck, then spent years at Boeing leading transformation on legacy systems. I'm preparing to be the owner and operator who shows up in the business, works with the team, and protects what already works.";
+  "I grew up in a small business with the goal of starting and growing one myself. I took a sidetrack into venture-backed companies, and now I'm getting back to my roots by combining my blue-collar and white-collar skills.";
 
 export const contactIntroDescription =
   "Founder, broker, lender, and advisor conversations are welcomed. NDA review is available before sensitive materials are exchanged.";
@@ -156,14 +130,15 @@ export type Feature = {
   icon: LucideIcon;
 };
 
-export const essentialIndustries = [
-  "Fire & life safety services",
-  "Compliance and inspection services",
-  "Managed IT services (MSPs)",
-  "Commercial field services and technical maintenance businesses",
-  "Adjacent B2B service categories with recurring revenue characteristics",
-];
+export const idealIndustries = [
+  "Fire & Life Safety Services",
+  "Broader Compliance & Inspection Services",
+] as const;
 
+export const secondaryIndustries = [
+  "Commercial Security Systems",
+  "Commercial HVAC (commercial maintenance only)",
+] as const;
 
 export const aboutTimeline = [
   {
@@ -171,8 +146,8 @@ export const aboutTimeline = [
     description: "Grew up in a blue collar family business, doing whatever the day required.",
   },
   {
-    title: "Georgia-Pacific",
-    description: "Built early operating discipline in industrial environments and process oriented teams.",
+    title: "Medical and Manufacturer Sales",
+    description: "Purposefully developed B2B sales skills in medical, then manufacturing.",
   },
   {
     title: "Ghostruck",

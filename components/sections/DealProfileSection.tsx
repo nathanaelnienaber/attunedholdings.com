@@ -1,10 +1,10 @@
-import { IdealSituationsAccordion } from "@/components/IdealSituationsAccordion";
 import { DealSheet } from "@/components/DealSheet";
 import { SectionIntro } from "@/components/SectionIntro";
 import {
   dealProfileRows,
-  essentialIndustries,
-  idealSituations,
+  fitIntroDescription,
+  idealIndustries,
+  secondaryIndustries,
   sectionIds,
 } from "@/lib/site";
 
@@ -15,7 +15,7 @@ export function DealProfileSection() {
         <SectionIntro
           eyebrow="Acquisition Fit"
           title="Acquisition parameters"
-          description="Profitable Washington service businesses where founder legacy, employee continuity, and long term operator ownership matter."
+          description={fitIntroDescription}
         />
 
         <div className="mt-12">
@@ -23,9 +23,9 @@ export function DealProfileSection() {
         </div>
 
         <div className="mt-16">
-          <h3 className="text-lg font-bold text-text">Industry focus</h3>
+          <h3 className="text-lg font-bold text-text">Ideal industries</h3>
           <ul className="mt-4 flex flex-wrap gap-3">
-            {essentialIndustries.map((industry) => (
+            {idealIndustries.map((industry) => (
               <li
                 key={industry}
                 className="rounded-5 border border-slate-200 bg-bg px-4 py-2 text-sm font-semibold text-slate-800"
@@ -34,13 +34,18 @@ export function DealProfileSection() {
               </li>
             ))}
           </ul>
-        </div>
 
-        <div className="mt-16">
-          <h3 className="subheading">Ideal transition situations</h3>
-          <div className="mt-6">
-            <IdealSituationsAccordion items={idealSituations} />
-          </div>
+          <h3 className="mt-8 text-lg font-bold text-text">Secondary industries</h3>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {secondaryIndustries.map((industry) => (
+              <li
+                key={industry}
+                className="rounded-5 border border-slate-100 bg-bg px-4 py-2 text-sm font-semibold text-muted"
+              >
+                {industry}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
