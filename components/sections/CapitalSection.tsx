@@ -1,6 +1,5 @@
-import { FinancingStructureList } from "@/components/FinancingStructureList";
 import { SectionIntro } from "@/components/SectionIntro";
-import { capitalCoInvestNote, capitalIntroDescription, financingStructures, sectionIds } from "@/lib/site";
+import { capitalIntroDescription, sectionIds } from "@/lib/site";
 
 export function CapitalSection() {
   return (
@@ -12,14 +11,6 @@ export function CapitalSection() {
           title="Credible capital with flexible structure options."
           description={capitalIntroDescription}
         />
-
-        <div className="mt-10">
-          <p className="eyebrow-dark">Open to all forms of financing</p>
-          <div className="mt-5">
-            <FinancingStructureList structures={financingStructures} dark />
-          </div>
-          <p className="prose-narrow body-dark mt-8">{capitalCoInvestNote}</p>
-        </div>
 
         <div className="mt-16 rounded-5 border border-white/10 bg-white/5 p-8 lg:p-10">
           <p className="eyebrow-dark">SBA Pre Approval</p>

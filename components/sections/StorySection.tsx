@@ -18,7 +18,13 @@ export function StorySection() {
               <Timeline items={aboutTimeline} />
             </div>
 
-            <p className="mt-10 text-sm font-semibold text-slate-700">{credentials}</p>
+            <div className="mt-10 space-y-2">
+              {credentials.map((line) => (
+                <p key={line} className="text-sm font-semibold text-slate-700">
+                  {line}
+                </p>
+              ))}
+            </div>
           </div>
 
           <div className="relative h-[420px] overflow-hidden rounded-5 shadow-xl lg:sticky lg:top-28">

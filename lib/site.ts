@@ -77,22 +77,6 @@ export const dealProfileRows = [
 export const fitIntroDescription =
   "Self-funded searcher pursuing an owner-operator acquisition. Pre-qualified to purchase up to $8M individually. For larger opportunities, I can bring in post-LOI investors after fit is established.";
 
-export const financingStructures = [
-  { label: "SBA 7(a)", hint: "Efficient leverage for qualified lower middle market deals" },
-  { label: "Conventional Bank Debt", hint: "Senior financing where terms and profile are the best fit" },
-  {
-    label: "ROBS",
-    hint: "Rollover for Business Startups. Retirement funds into the acquisition when it fits.",
-  },
-  { label: "Seller Note", hint: "Aligns interests and can improve overall terms" },
-  { label: "Earnout", hint: "Performance based upside tied to agreed milestones" },
-  { label: "Rollover Equity", hint: "Minority upside for owners who want to stay invested" },
-  { label: "Hybrid Structures", hint: "Debt, seller paper, earnout, and equity combined" },
-] as const;
-
-export const capitalCoInvestNote =
-  "For the right opportunity, I'm open to a small number of passive investors who fit a long term operator model. Patient capital, clear governance, and no pressure to flip the business.";
-
 export const capitalIntroDescription =
   "I have $1.5M+ in deployable capital and lender pre qualification up to $8M. I have access to investors post-LOI for larger deals.";
 
@@ -102,27 +86,19 @@ export const afterCloseOutcomes = [
   "The founder's legacy is honored. Customers keep the relationships they trust while the business gets stronger.",
 ] as const;
 
-export const credentials =
-  "Former founder, owner and operator. I know how to deal with employees with grease on their hands and employees with PhDs on their resumes.";
-
-export const trustSignals = [
-  "Former founder and operator",
-  "Former Boeing",
-  "$1.5M+ deployable capital",
-  "SBA pre qualified up to $8M",
-];
+export const credentials = [
+  "Former founder, owner and operator. I know how to deal with employees with grease on their hands and employees with PhDs on their resumes.",
+  "My superpower is admitting I don't know it all and empowering those who do.",
+] as const;
 
 export const heroDescription =
-  "I'm Nathanael Nienaber, a former founder and operator acquiring a Washington service business through Attuned Holdings LLC. I'm not a fund flipping assets — I'm here to protect what works, strengthen the team, and build something that lasts.";
+  "I'm Nathanael Nienaber, a former founder and operator, looking to acquire a small to medium sized business (SMB) in the Seattle Metro Area.";
 
 export const storyIntro =
   "I grew up in a small business with the goal of starting and growing one myself. I took a sidetrack into venture-backed companies, and now I'm getting back to my roots by combining my blue-collar and white-collar skills.";
 
-export const contactIntroDescription =
-  "Founder, broker, lender, and advisor conversations are welcomed. NDA review is available before sensitive materials are exchanged.";
-
 export const footerTagline =
-  "Operator buyer pursuing enduring Washington essential service businesses with a focus on durable teams and long term continuity.";
+  "Buyer pursuing industry agnostic Seattle Metro business between $750k-$2M EBITDA.";
 
 export type Feature = {
   title: string;
@@ -151,12 +127,12 @@ export const aboutTimeline = [
   },
   {
     title: "Ghostruck",
-    description: "Founded and operated the company. Raised $3M and scaled to 18 cities.",
+    description: "Founded a tech startup in a blue-collar industry. Managed 30+ employees, investors, and scaled to 18 cities.",
   },
   {
     title: "Boeing",
     description:
-      "Spent 5+ years as a Technical Product Manager, Chief of Staff for CDO, and led modernization of 30+ year legacy systems.",
+      "Learned and then led transformation team in ivory towers and manufacturing floor as Technical PM and Chief of Staff for CDO.",
   },
 ];
 

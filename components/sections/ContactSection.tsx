@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { ContactFormToggle } from "@/components/contact/ContactFormToggle";
 import { SectionIntro } from "@/components/SectionIntro";
-import { contactIntroDescription, sectionIds } from "@/lib/site";
+import { sectionIds } from "@/lib/site";
 
 const BookingEmbed = dynamic(
   () => import("@/components/contact/BookingEmbed").then((module) => module.BookingEmbed),
@@ -15,11 +15,7 @@ export function ContactSection() {
   return (
     <section id={sectionIds.contact} className="section section-y scroll-mt-24 bg-surface">
       <div className="container">
-        <SectionIntro
-          eyebrow="Contact"
-          title="Share a confidential acquisition opportunity."
-          description={contactIntroDescription}
-        />
+        <SectionIntro eyebrow="Contact" />
 
         <div className="mt-12">
           <h3 className="subheading">Book a meeting</h3>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { heroDescription, trustSignals } from "@/lib/site";
+import { heroDescription } from "@/lib/site";
 
 export function HeroSection() {
   return (
@@ -30,16 +30,6 @@ export function HeroSection() {
           <a href="#contact" className="btn-secondary">
             Discuss a Business
           </a>
-        </div>
-        <div className="mt-10 flex flex-wrap gap-3">
-          {trustSignals.map((signal) => (
-            <span
-              key={signal}
-              className="rounded-5 border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur"
-            >
-              {signal}
-            </span>
-          ))}
         </div>
       </div>
     </section>
