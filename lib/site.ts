@@ -70,7 +70,7 @@ export const dealProfileRows = [
   { label: "Buyer type", value: "Self-funded searcher / owner-operator" },
   { label: "Geography", value: "Within ~2 hours of Bellevue, WA" },
   { label: "Ideal earnings", value: "$750K–$1M SDE (self-funded)" },
-  { label: "Larger deals", value: "$1M–$2M EBITDA (post-LOI investors)" },
+  { label: "Larger deals", value: "Up to $1M+ SDE (post-LOI investors)" },
   { label: "Industry", value: "Industry agnostic" },
 ] as const;
 
@@ -98,7 +98,7 @@ export const storyIntro =
   "I grew up in a small business with the goal of starting and growing one myself. I took a sidetrack into venture-backed companies, and now I'm getting back to my roots by combining my blue-collar and white-collar skills.";
 
 export const footerTagline =
-  "Buyer pursuing industry agnostic Seattle Metro business between $750k-$2M EBITDA.";
+  "Buyer pursuing industry agnostic Seattle Metro business between $750K-$1M SDE.";
 
 export type Feature = {
   title: string;
