@@ -70,7 +70,7 @@ export const dealProfileRows = [
   { label: "Buyer type", value: "Self-funded searcher / owner-operator" },
   { label: "Geography", value: "Within ~2 hours of Bellevue, WA" },
   { label: "Ideal earnings", value: "$750K–$1M SDE (self-funded)" },
-  { label: "Larger deals", value: "Up to $1M+ SDE (post-LOI investors)" },
+  { label: "Larger deals", value: "$1M–$2M SDE (post-LOI investors)" },
   { label: "Industry", value: "Industry agnostic" },
 ] as const;
 
