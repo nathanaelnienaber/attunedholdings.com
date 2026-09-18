@@ -29,10 +29,10 @@ export function StorySection() {
 
           <div className="relative h-[420px] overflow-hidden rounded-5 shadow-xl lg:sticky lg:top-28">
             <Image
-              src="/IMG_4193.jpg"
-              alt="Professional leadership meeting"
+              src="/nathanael-nienaber.jpg"
+              alt="Nathanael Nienaber"
               fill
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
         </div>
