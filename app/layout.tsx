@@ -2,13 +2,27 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { schemaData, site } from "@/lib/site";
+import { faqItems, schemaData, site } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${site.url}/#faq`,
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -29,6 +43,9 @@ export const metadata: Metadata = {
     "Attuned Holdings",
     "Nathanael Nienaber",
   ],
+  alternates: {
+    canonical: site.url,
+  },
   openGraph: {
     title: "Nathanael Nienaber | Long Term Operator Buyer in Washington",
     description:
@@ -61,6 +78,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
         <Header />
         <main className="flex-1">{children}</main>

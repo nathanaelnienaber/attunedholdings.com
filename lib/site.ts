@@ -56,6 +56,7 @@ export const sectionIds = {
   story: "story",
   capital: "capital",
   approach: "approach",
+  faq: "faq",
   contact: "contact",
 } as const;
 
@@ -63,6 +64,7 @@ export const navItems = [
   { href: "#fit", label: "Fit", sectionId: sectionIds.fit },
   { href: "#story", label: "Background", sectionId: sectionIds.story },
   { href: "#capital", label: "Capital", sectionId: sectionIds.capital },
+  { href: "#faq", label: "FAQ", sectionId: sectionIds.faq },
   { href: "#contact", label: "Contact", sectionId: sectionIds.contact },
 ];
 
@@ -125,6 +127,54 @@ export const aboutTimeline = [
       "Learned and then led transformation team in ivory towers and manufacturing floor as Technical PM and Chief of Staff for CDO.",
   },
 ];
+
+export const faqItems = [
+  {
+    question: "What size business is Nathanael looking to acquire?",
+    answer:
+      "The self funded target is a business with $750K to $1M in SDE. For larger opportunities, in the $1M to $2M SDE range, Nathanael can bring in investors after an LOI is signed, once fit is established.",
+  },
+  {
+    question: "What geography do you buy in?",
+    answer:
+      "The search is focused on businesses located within about 2 hours of Bellevue, Washington, in the Seattle Metro Area.",
+  },
+  {
+    question: "Does the acquisition need to be in a specific industry?",
+    answer:
+      "No, the search is industry agnostic. The priority is the fit of the business and the people in it, not a specific sector.",
+  },
+  {
+    question: "How is the deal financed?",
+    answer:
+      "Nathanael has $1.5M or more in deployable capital and lender pre qualification up to $8M, including a broker issued SBA pre approval letter for up to $8M. That letter supports early stage diligence conversations with owners, brokers, and advisors evaluating transaction readiness and close certainty. For larger deals, he has access to investors after an LOI is signed.",
+  },
+  {
+    question: "Who is actually buying the business?",
+    answer:
+      "Nathanael Nienaber, a former founder, owner, and operator, is acquiring through Attuned Holdings LLC as a self funded searcher who will own and operate the business, not a private equity fund or holding company looking to flip the business.",
+  },
+  {
+    question: "What happens to employees and culture after close?",
+    answer:
+      "The team stays intact. Upgrades are sequenced around trust and continuity, not disruption. Systems modernize in phases, with cloud, ERP, and automation adopted only where they reduce friction, not for their own sake. The founder's legacy is honored, and customers keep the relationships they trust while the business gets stronger.",
+  },
+  {
+    question: "Will the business be run hands on after the transition?",
+    answer:
+      "Yes. Nathanael is an owner and operator buyer, meaning he intends to run the business directly after close, not install an outside manager or hold it as a passive investment.",
+  },
+  {
+    question: "What is Nathanael's background as an operator?",
+    answer:
+      "He is a former founder, owner, and operator who has worked with employees with grease on their hands and employees with PhDs on their resumes. He grew up in a small business, built B2B sales experience in medical and manufacturing, founded and scaled a startup called Ghostruck to 30 plus employees and 18 cities, and later led a transformation team at Boeing as Technical PM and Chief of Staff for the CDO.",
+  },
+  {
+    question: "How do I start a conversation about a business?",
+    answer:
+      "Book a video call, phone call, or in person meeting in Bellevue, Washington directly on the site, or use the contact form to reach out. Owners, brokers, and advisors are welcome to start the conversation early, even before a deal is formally on the market.",
+  },
+] as const;
 
 export const schemaData = [
   {
