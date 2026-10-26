@@ -1,15 +1,7 @@
-import dynamic from "next/dynamic";
+import { BookingEmbed } from "@/components/contact/BookingEmbedClient";
 import { ContactFormToggle } from "@/components/contact/ContactFormToggle";
 import { SectionIntro } from "@/components/SectionIntro";
 import { sectionIds } from "@/lib/site";
-
-const BookingEmbed = dynamic(
-  () => import("@/components/contact/BookingEmbed").then((module) => module.BookingEmbed),
-  {
-    ssr: false,
-    loading: () => <p className="text-slate-500">Loading calendar...</p>,
-  },
-);
 
 export function ContactSection() {
   return (
